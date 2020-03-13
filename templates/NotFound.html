@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>chatbot interface</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{{url_for('.static', filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <!-- for the chat part -->
+  <link href="{{url_for('.static', filename='css/chatbot.css')}}" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="{{url_for('.static', filename='vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Plugin CSS -->
+  <link href="{{url_for('.static', filename='vendor/magnific-popup/magnific-popup.css')}}" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="{{url_for('.static', filename='css/freelancer.min.css')}}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+<header class="masthead bg-primary text-white text-center">
+    <div class="container">
+      <img class="img-fluid mb-5 d-block mx-auto" src="{{url_for('.static', filename='img/profile.png')}}"  alt="bot">
+        <h3 class="text-uppercase mb-0">sorry ! can't find what you asked for :( 
+        </h3>
+        <hr class="star-light">
+        <form method="POST" action="{{url_for('return_index')}}">
+            <button class="btn btn-xl btn-outline-light"  id="sendMessageButton" type="submit"> return to Home Page
+          </button>
+        </form>
+    </div>
+  </header>
+
+
+</body>
+</html>

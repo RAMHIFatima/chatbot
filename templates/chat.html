@@ -1,0 +1,51 @@
+<div class="inbox_msg">
+    <div class="inbox_people">
+        <div class="headind_srch">
+            <div class="recent_heading">
+                <h4>Stories</h4>
+            </div>
+        </div>
+        <div class="inbox_chat">
+            <div class="chat_list active_chat">
+                <div class="chat_people">
+                    <div class="chat_ib">
+                        <h5>Story number
+                            <span style="color:#0f626d;"class="chat_date">{{ number }}</span>
+                        </h5>
+                        <p>{{ story }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form method="POST" action="{{url_for('return_index')}}">
+            <button id ="return" class="btn center btn-secondary btn-xl" type="submit" >Choose another Story !
+                <i class="fas fa-book-reader"></i>
+            </button>
+        </form>
+    </div>    
+    <div class="mesgs">
+        <div class="msg_history" id="scroll">
+            <div class="incoming_msg">
+                <div class="incoming_msg_img">
+                    <img style="" src="/static/img/profile.png" alt="bot"/>
+                </div>
+                <div class="received_msg">
+                    <div class="received_withd_msg">
+                        <p> Ask me something about the story you chose :) </p>
+                            <span id="date"class="time_date"> </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="type_msg">
+            <div class="input_msg_write">
+                <form method="POST" action="{{ url_for('predict') }}" id="chatForm">
+                    <input type="text" class="write_msg" placeholder="Type a question ( Example: Where is [name] )" name="ques"/>
+                        <button class="msg_send_btn" type="submit">
+                            <i class="far fa-paper-plane"></i>
+                        </button>
+                </form>
+            </div>
+        </div>      
+    </div>    
+</div>
